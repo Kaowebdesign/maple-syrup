@@ -1,0 +1,123 @@
+.header {
+    @extend %basePos;
+    background: #fff;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10);
+    padding-left: 50px;
+    &__wrap {
+        width: 100%;
+    }
+}
+#preloader{
+    // display: none;
+}
+.preloader{
+    @extend %baseFlex;
+    @extend %flexFullCenter;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:$preloaderBack;
+    z-index: 998;
+    &__wrap{
+        @extend %baseFlex;
+        @extend %alignCenter;
+    }
+    &__img{
+        padding: 18px;
+    }
+    &__topText{
+        @extend %robotoBase;
+        @extend %robotoBold;
+        font-size: (31rem / 16);
+        color: $preloaderDuo;
+        line-height: 26px;
+        &_yellow{
+            color: $preloaderUno;
+        }
+    }
+    &__text{
+        @extend %robotoBase;
+        @extend %robotoRegular;
+        font-size: (24rem / 16);
+        color: $preloaderText;
+        letter-spacing: 12px;
+    }
+}
+
+.logo {
+    @extend %baseTransition;
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.menuBar {
+    @extend %baseTransition;
+    @extend %absolutePos;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14px;
+    &:hover {
+        opacity: .7;
+    }
+    &__item {
+        display: block;
+        width: 28px;
+        height: 5px;
+        border-radius: 3px;
+        background-color: rgba(171, 171, 171, 1);
+        margin: 0 0 4px;
+    }
+}
+
+.welcome {
+    max-width: 458px;
+    margin: 0 auto;
+    border-radius: 0px 0px 4px 4px;
+    background-color: $headerWelcomeBack;
+    text-align: center;
+    color: $headerWelcomeText;
+    font-size: (12em / 16);
+    padding: 3.2px 0;
+    &__text {
+        margin: 0;
+    }
+    &__link {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+.menu {
+    &__list {
+        @extend %baseFlex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0 0 6px;
+    }
+    &__item {
+        display: inline-block;
+    }
+    &__link {
+        @extend %nullLink;
+        display: block;
+        color: inherit;
+        padding: 8px 27px;
+        &:hover {
+            opacity: .7;
+            color: #000;
+        }
+    }
+}
+
+.startBtn {
+    @extend %baseTransition;
+    text-transform: uppercase;
+    padding: 5.6px 48px;
+    color: $headerBtn;
+    border-radius: 4px;
+    background: linear-gradient(269deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
+    font-size: (14em / 16);
+}
