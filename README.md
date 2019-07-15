@@ -2,7 +2,7 @@
 
 ###Instuctions to set this app
 
-* git clone https://github.com/Kaowebdesign/techtask.git
+* git clone https://github.com/Kaowebdesign/maple-syrup
 * cd techtask
 * npm i
 * gulp
