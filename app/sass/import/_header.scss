@@ -1,88 +1,153 @@
 .header {
     @extend %basePos;
-    background: #fff;
+    background-color: $basicWhite;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10);
     padding-left: 50px;
+    height: 70px;
     &__wrap {
         width: 100%;
     }
 }
 #preloader{
-    // display: none;
-}
-.preloader{
-    @extend %baseFlex;
-    @extend %flexFullCenter;
     position: fixed;
     top:0;
     left: 0;
     right: 0;
     bottom: 0;
-    background:$preloaderBack;
     z-index: 998;
+}
+.preloader{
+    @extend %baseFlex;
+    @extend %flexFullCenter;
+    width: 100%;
+    height: 100%;
+    background:$preloaderBack;
+}
+
+.logo {
+    @extend %baseTransition;
+    @extend %nullLink;
+    &:hover {
+        opacity: .8;
+    }
     &__wrap{
         @extend %baseFlex;
         @extend %alignCenter;
     }
+    &__imgWrap{
+        &_padding{
+            &_sm{
+                padding: 10px;
+            }
+            &_lg{
+                padding: 18px;
+            }
+        }
+    }
     &__img{
-        padding: 18px;
+        &_size{
+            &_sm{
+                max-width:24px;
+            }
+        }
     }
     &__topText{
         @extend %robotoBase;
         @extend %robotoBold;
-        font-size: (31rem / 16);
-        color: $preloaderDuo;
-        line-height: 26px;
-        &_yellow{
-            color: $preloaderUno;
+        &_ltSpacing{
+            &_sm{
+                letter-spacing: 1.65px;
+            }
+            &_lg{
+                letter-spacing: 2.9px;
+            }
+        }
+        &_size{
+            &_sm{
+                font-size: (18rem / 16);
+                line-height: 18px;
+            }
+            &_lg{
+                font-size: (31rem / 16);
+                line-height: 26px;
+            }
+        }
+        &_color{
+            &_or{
+                color: $preloaderDuo;
+            }
+            &_yl{
+                color: $preloaderUno;
+            }
         }
     }
     &__text{
         @extend %robotoBase;
         @extend %robotoRegular;
-        font-size: (24rem / 16);
-        color: $preloaderText;
-        letter-spacing: 12px;
+        &_ltSpacing{
+            &_sm{
+                letter-spacing: 9px;
+            }
+            &_lg{
+                 letter-spacing: 16px;
+            }
+        }
+        &_size{
+            &_sm{
+                font-size:(14rem / 16);
+            }
+            &_lg{
+                font-size: (24rem / 16);
+            }
+        }
+        &_color{
+            &_bl{
+                color:$basicBlack;
+            }
+            &_gr{
+                color: $preloaderText;
+            }
+        }
     }
-}
-
-.logo {
-    @extend %baseTransition;
-    &:hover {
-        opacity: .8;
-    }
+    
 }
 
 .menuBar {
     @extend %baseTransition;
-    @extend %absolutePos;
-    top: 50%;
-    transform: translateY(-50%);
+    position:fixed;
+    top: 22px;
     left: 14px;
+    z-index: 990;
     &:hover {
         opacity: .7;
     }
     &__item {
         display: block;
         width: 28px;
-        height: 5px;
-        border-radius: 3px;
-        background-color: rgba(171, 171, 171, 1);
-        margin: 0 0 4px;
+        height: 4px;
+        border-radius: 1px;
+        background-color: $barsColor;
+        margin: 0 0 5.5px;
     }
 }
 
 .welcome {
     max-width: 458px;
+    width: 100%;
     margin: 0 auto;
     border-radius: 0px 0px 4px 4px;
-    background-color: $headerWelcomeBack;
+    background-color: $basicGrey;
     text-align: center;
-    color: $headerWelcomeText;
+    color: $basicWhite;
     font-size: (12em / 16);
-    padding: 3.2px 0;
+    overflow: hidden;
+    &_padding{
+        padding: 3.2px 20px;
+    }
     &__text {
         margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
     }
     &__link {
         color: #fff;
@@ -104,20 +169,74 @@
         @extend %nullLink;
         display: block;
         color: inherit;
-        padding: 8px 27px;
+        padding: 8px 16px;
+        &_color{
+             &_bl{
+                color: $basicBlack;
+             }
+        }
         &:hover {
-            opacity: .7;
-            color: #000;
+            opacity: .8;
         }
     }
 }
 
-.startBtn {
-    @extend %baseTransition;
+.button{
+    @extend %nullLink;
     text-transform: uppercase;
-    padding: 5.6px 48px;
-    color: $headerBtn;
     border-radius: 4px;
-    background: linear-gradient(269deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
-    font-size: (14em / 16);
+    &_padding{
+        &_sm{
+            padding: 7px 20px;
+        }
+        &_md{
+            padding: 12px 40px;
+        }
+    }
+    &_style{
+        &_lt{
+            transition: background-color  .5s;
+            border: 1px solid #EBEBEB;
+            background-color:$basicWhite;
+            &:hover{
+                background: #eaeaea;
+                color: inherit;
+            }
+        }
+        &_or{
+            transition: box-shadow .5s;
+            background: linear-gradient(269deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
+            box-shadow: 0px 3px 6px 0px #D55223; 
+            &:hover{
+                box-shadow: 0px 4px 16px 0px #D55223;
+                color: $basicWhite;
+            }
+        }
+        &_wo{
+            transition: box-shadow .5s;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 236, 217, 1) 100%);
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+            &:hover{
+                color: $basicOrange;
+                box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
+            }
+        }
+    }
+    &_color{
+        &_bl{
+            color: $basicBlack;
+        }
+        &_or{
+            color: $basicOrange;
+        }
+        &_wh{
+            color: $basicWhite;
+        }
+    }
+    &_size{
+        &_sm{
+            font-size: (14rem / 16);
+            font-weight: 500;
+        }
+    }
 }

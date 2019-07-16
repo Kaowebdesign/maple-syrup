@@ -1,35 +1,36 @@
-header.header
-    #preloader
-        .preloader
-            .preloader__wrap
-                img(src="/img/amber-drop.png", alt="").preloader__img.wow.fadeInDownBig
-                .preloader__textWrap
-                    p.preloader__topText.m-0  MAPLE <span class="preloader__topText_yellow">SYRUP</span>
-                    p.preloader__text.m-0 EXCHANGE
+header.header          
     a(href="#").menuBar
         span.menuBar__item
         span.menuBar__item
         span.menuBar__item
-    .container
+    .container-fluid
         .row.header__wrap
             .col-lg.col-2.d-flex.justify-content-start.align-items-center
                 a(href="/").logo
-                    img(src="img/logo.png", alt="Teach Test").logo__img
+                    .logo__wrap
+                        .logo__imgWrap.logo__imgWrap_padding_sm
+                            img(src="/img/amber-drop.png", alt="").logo__img.logo__img_size_sm
+                        .logo__textWrap
+                            p.logo__topText.logo__topText_size_sm.logo__topText_ltSpacing_sm.logo__topText_color_or.m-0  MAPLE <span class="logo__topText_color_yl">SYRUP</span>
+                            p.logo__text.logo__text_color_bl.logo__text_size_sm.logo__text_ltSpacing_sm.m-0 EXCHANGE
             .col-lg-6.col-10.d-flex.justify-content-end.d-lg-block
                 .header__center
-                    .welcome
-                        p.welcome__text Welcome to the new website. The last version is <a href="#" class="welcome__link">here</a>
+                    .welcome.welcome_padding
+                        p.welcome__text Active Traders: 156 | Volume USD: 9 999 | Volume Gallons: 120
                     nav.menu
                         ul.menu__list
                             li.menu__item 
-                                a(href="#").menu__link About
+                                a(href="#").menu__link.menu__link_color_bl Trading
                             li.menu__item 
-                                a(href="#").menu__link View
+                                a(href="#").menu__link.menu__link_color_bl Regulations
                             li.menu__item 
-                                a(href="#").menu__link FAQ
+                                a(href="#").menu__link.menu__link_color_bl Specifications
                             li.menu__item 
-                                a(href="#").menu__link News
+                                a(href="#").menu__link.menu__link_color_bl About
                             li.menu__item 
-                                a(href="#").menu__link Contacts
+                                a(href="#").menu__link.menu__link_color_bl News
+                            li.menu__item 
+                                a(href="#").menu__link.menu__link_color_bl Contacts
             .col-lg.d-none.d-lg-flex.justify-content-end.align-items-center
-                a(href="#").startBtn GET STARTED
+                a(href="#").button.button_padding_sm.button_color_bl.button_style_lt.button_size_sm.m-2 Sign in
+                a(href="#").button.button_padding_sm.button_color_wh.button_style_or.button_size_sm.m-2 Sign up

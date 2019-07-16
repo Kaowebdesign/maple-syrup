@@ -10,49 +10,159 @@
     <title>Maple syrup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
     <script src="js/preloader.js"></script>
   </head>
   <body> 
-    <header class="header">
-      <div id="preloader">
-        <div class="preloader">
-          <div class="preloader__wrap"><img class="preloader__img wow fadeInDownBig" src="/img/amber-drop.png" alt="">
-            <div class="preloader__textWrap">
-              <p class="preloader__topText m-0"> MAPLE <span class="preloader__topText_yellow">SYRUP</span></p>
-              <p class="preloader__text m-0">EXCHANGE</p>
-            </div>
-          </div>
-        </div>
-      </div><a class="menuBar" href="#"><span class="menuBar__item"></span><span class="menuBar__item"></span><span class="menuBar__item"></span></a>
-      <div class="container">
+    <header class="header">         <a class="menuBar" href="#"><span class="menuBar__item"></span><span class="menuBar__item"></span><span class="menuBar__item"></span></a>
+      <div class="container-fluid">
         <div class="row header__wrap">
-          <div class="col-lg col-2 d-flex justify-content-start align-items-center"><a class="logo" href="/"><img class="logo__img" src="img/logo.png" alt="Teach Test"></a></div>
+          <div class="col-lg col-2 d-flex justify-content-start align-items-center"><a class="logo" href="/">
+              <div class="logo__wrap">
+                <div class="logo__imgWrap logo__imgWrap_padding_sm"><img class="logo__img logo__img_size_sm" src="/img/amber-drop.png" alt=""></div>
+                <div class="logo__textWrap">
+                  <p class="logo__topText logo__topText_size_sm logo__topText_ltSpacing_sm logo__topText_color_or m-0"> MAPLE <span class="logo__topText_color_yl">SYRUP</span></p>
+                  <p class="logo__text logo__text_color_bl logo__text_size_sm logo__text_ltSpacing_sm m-0">EXCHANGE</p>
+                </div>
+              </div></a></div>
           <div class="col-lg-6 col-10 d-flex justify-content-end d-lg-block">
             <div class="header__center">
-              <div class="welcome">
-                <p class="welcome__text">Welcome to the new website. The last version is <a href="#" class="welcome__link">here</a></p>
+              <div class="welcome welcome_padding">
+                <p class="welcome__text">Active Traders: 156 | Volume USD: 9 999 | Volume Gallons: 120</p>
               </div>
               <nav class="menu">
                 <ul class="menu__list">
-                  <li class="menu__item"> <a class="menu__link" href="#">About</a></li>
-                  <li class="menu__item"> <a class="menu__link" href="#">View</a></li>
-                  <li class="menu__item"> <a class="menu__link" href="#">FAQ</a></li>
-                  <li class="menu__item"> <a class="menu__link" href="#">News</a></li>
-                  <li class="menu__item"> <a class="menu__link" href="#">Contacts</a></li>
+                  <li class="menu__item"> <a class="menu__link menu__link_color_bl" href="#">Trading</a></li>
+                  <li class="menu__item"> <a class="menu__link menu__link_color_bl" href="#">Regulations</a></li>
+                  <li class="menu__item"> <a class="menu__link menu__link_color_bl" href="#">Specifications</a></li>
+                  <li class="menu__item"> <a class="menu__link menu__link_color_bl" href="#">About</a></li>
+                  <li class="menu__item"> <a class="menu__link menu__link_color_bl" href="#">News</a></li>
+                  <li class="menu__item"> <a class="menu__link menu__link_color_bl" href="#">Contacts</a></li>
                 </ul>
               </nav>
             </div>
           </div>
-          <div class="col-lg d-none d-lg-flex justify-content-end align-items-center"><a class="startBtn" href="#">GET STARTED</a></div>
+          <div class="col-lg d-none d-lg-flex justify-content-end align-items-center"><a class="button button_padding_sm button_color_bl button_style_lt button_size_sm m-2" href="#">Sign in</a><a class="button button_padding_sm button_color_wh button_style_or button_size_sm m-2" href="#">Sign up</a></div>
         </div>
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <div id="preloader">
+        <div class="preloader">
+          <div class="logo__wrap">
+            <div class="logo__imgWrap logo__imgWrap_padding_lg"><img class="logo__img wow fadeInDownBig" src="/img/amber-drop.png" alt=""></div>
+            <div class="logo__textWrap">
+              <p class="logo__topText logo__topText_size_lg logo__topText_ltSpacing_lg logo__topText_color_or m-0"> MAPLE <span class="logo__topText_color_yl">SYRUP</span></p>
+              <p class="logo__text logo__text_ltSpacing_lg logo__text_size_lg logo__text_color_gr m-0">EXCHANGE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="leftBar"> </aside>
+      <div class="main__bg"></div>
+      <div class="main__topCont">
+        <div class="container main__wrap">
+          <div class="row main_padding_top">
+            <div class="col-lg"></div>
+            <div class="col-lg-5 col-6">
+              <article class="main__info wow fadeInUp">
+                <h1 class="caption caption_style_lt caption_size_md">WE HELP TO GET BETTER DEALS ON <br> <span class="caption_style_rg caption_size_lg">MAPLE SYRUP EXCHANGE</span></h1>
+                <p class="main__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <div class="row">
+                  <div class="col-xl-12 col-8 d-flex flex-xl-row flex-column justify-content-start main__buttons"><a class="button button_padding_md button_color_or button_style_wo button_size_sm mt-1" href="#">START TRADING</a></div>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3 col-6 d-flex align-items-end justify-content-center barrel-wrap">
+              <div class="owl-carousel owl-theme"><a class="barrel" href="#">
+                  <div class="barrel__imgWrap"><img class="barrel__img" src="img/barel-golden-02.png" alt="barel golden"></div>
+                  <div class="barrel__textWrap">
+                    <p class="barrel__text m-0">GSM-JUL19</p>
+                  </div></a><a class="barrel" href="#">
+                  <div class="barrel__imgWrap"><img class="barrel__img" src="img/barel-amber-02.png" alt="barel golden"></div>
+                  <div class="barrel__textWrap">
+                    <p class="barrel__text m-0">GSM-AUR23</p>
+                  </div></a></div>
+            </div>
+            <div class="col-lg-2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="buyCards"><a class="buyCards__downBtn" href="#"></a>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="caption caption_style_or">Buy And Sell Maple Syrup <br> In Few Simple Steps</h2>
+              <p class="buyCards__text">Become a trader by performing a series of easy actions. <br> Widen your space of possibilities in Maple Syrup wholesale.</p>
+            </div>
+          </div>
+          <div class="row prodsCard-wrap d-flex flex-lg-row flex-column align-items-center">
+            <div class="col d-flex justify-content-center prodsCard prodsCard_yellow wow fadeInUp">
+              <div class="prodsCard__backImg prodsCard__backImg_yellow"></div>
+              <div class="prodsCard__backGrad prodsCard__backGrad_yellow"></div>
+              <div class="text-center d-flex flex-column justify-content-between prodsCard__wrap">
+                <div class="prodsCard__top">
+                  <h3 class="m-0 prodsCard__caption">AAA</h3>
+                  <p class="prodsCard__description">Tech Task For You</p>
+                </div>
+                <div class="prodsCard__bottom"><a class="btn btn-light mainBtn mainBtn_orange mainBtn_padding prodsCard__btn" href="#">GET STARTED</a>
+                  <p class="prodsCard__cost">Tech Task <span class="prodsCard__price">$00.00</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center prodsCard prodsCard_orange wow fadeInUp" data-wow-delay=".3s">
+              <div class="prodsCard__backImg prodsCard__backImg_orange"></div>
+              <div class="prodsCard__backGrad prodsCard__backGrad_orange"></div>
+              <div class="text-center d-flex flex-column justify-content-between prodsCard__wrap">
+                <div class="prodsCard__top">
+                  <h3 class="m-0 prodsCard__caption">AAA</h3>
+                  <p class="prodsCard__description">Tech Task For You</p>
+                </div>
+                <div class="prodsCard__bottom"><a class="btn btn-light mainBtn mainBtn_orange mainBtn_padding prodsCard__btn" href="#">GET STARTED</a>
+                  <p class="prodsCard__cost">Tech Task <span class="prodsCard__price">$00.00</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center prodsCard prodsCard_red wow fadeInUp" data-wow-delay=".6s">
+              <div class="prodsCard__backImg prodsCard__backImg_red"></div>
+              <div class="prodsCard__backGrad prodsCard__backGrad_red"></div>
+              <div class="text-center d-flex flex-column justify-content-between prodsCard__wrap">
+                <div class="prodsCard__top">
+                  <h3 class="m-0 prodsCard__caption">AAA</h3>
+                  <p class="prodsCard__description">Tech Task For You</p>
+                </div>
+                <div class="prodsCard__bottom"><a class="btn btn-light mainBtn mainBtn_orange mainBtn_padding prodsCard__btn" href="#">GET STARTED</a>
+                  <p class="prodsCard__cost">Tech Task <span class="prodsCard__price">$00.00</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center prodsCard prodsCard_darkRed wow fadeInUp" data-wow-delay=".9s">
+              <div class="prodsCard__backImg prodsCard__backImg_darkRed"></div>
+              <div class="prodsCard__backGrad prodsCard__backGrad_darkRed"></div>
+              <div class="text-center d-flex flex-column justify-content-between prodsCard__wrap">
+                <div class="prodsCard__top">
+                  <h3 class="m-0 prodsCard__caption">AAA</h3>
+                  <p class="prodsCard__description">Tech Task For You</p>
+                </div>
+                <div class="prodsCard__bottom"><a class="btn btn-light mainBtn mainBtn_orange mainBtn_padding prodsCard__btn" href="#">GET STARTED</a>
+                  <p class="prodsCard__cost">Tech Task <span class="prodsCard__price">$00.00</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="footer"></footer>
     <script>new WOW().init();</script>
   </body>
