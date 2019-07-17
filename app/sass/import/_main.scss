@@ -1,7 +1,6 @@
 .main {
    color: $basicWhite;
    overflow: hidden;
-   min-height: 1500px;
    &_padding{
       &_top{
          padding-top: 50px;
@@ -55,24 +54,38 @@
 
 
 .caption {
-   text-transform: uppercase;
    &_style{
       &_lt{
          @extend %robotoBase;
          font-weight: 300;
          letter-spacing: 1.25px;
+         text-transform: uppercase;
       }
       &_rg{
          @extend %freedokaFont;
          font-weight: 400;
          text-shadow: 0px 3px 6px #000000;
          letter-spacing: 1.25px;
+         text-transform: uppercase;
       }
       &_or{
          @extend %freedokaFont;
          @extend %textCenter;
          font-size: (32rem / 16);
          color: $basicOrange;
+         text-transform: uppercase;
+      }
+      &_gr{
+         @extend %freedokaFont;
+         @extend %textCenter;
+         color:$basicGrey;
+         font-size: (24rem /16);
+      }
+      &_lg{
+         @extend %freedokaFont;
+         @extend %textCenter;
+         font-size:(36rem / 16);
+         text-transform: uppercase;
       }
    }
    &_size{
@@ -91,9 +104,9 @@
       content: "";
       @extend %absolutePos;
       left: 50%;
-      bottom: -50%;
+      bottom: -48%;
       display: block;
-      width: 400px;
+      width: 388px;
       height:400px;
       border-radius: 100%;
       background: radial-gradient(rgba(54, 31, 0, 0.7),rgba(255, 255, 255, 0) 50%);
@@ -164,39 +177,10 @@
 .buyCards{
    position: relative;
    width: 100%;
-   min-height: 800px;
    margin-top: -80px;
    padding: 150px 0 100px;
    background-color: $basicWhite;
    border-radius: 1000px / 200px;
-   &__downBtn{
-      @extend %absolutePos;
-      @extend %baseFlex;
-      @extend %flexFullCenter;
-      left: 50%;
-      transform: translateX(-50%);
-      top:-30px;
-      width: 60px;
-      height: 60px;
-      background:$basicWhite;
-      border-radius: 100px;
-      background: radial-gradient(at top left, rgba(255, 255, 255, 1), rgba(255, 236, 217, 1) );
-      box-shadow: 0px 6px 9px 0px rgba(165, 94, 0, 0.25);
-      z-index: 100;
-      font-size: 22px;
-      &:hover{
-        &::after{
-           margin-top: 5px;
-        }
-      }
-      &::after{
-         content: "";
-         transition: margin .5s ease;
-         width: 20px;
-         height: 20.52px;
-         background-image:$arrowDown;
-      }
-   }
    &__text{
       @extend %robotoRegular;
       @extend %textCenter;
@@ -204,45 +188,163 @@
       padding: 20px;
    }
 }
+.downBtn{
+   @extend %baseFlex;
+   @extend %flexFullCenter;
+   width: 60px;
+   height: 60px;
+   background:$basicWhite;
+   border-radius: 100px;
+   background: radial-gradient(at top left, rgba(255, 255, 255, 1), rgba(255, 236, 217, 1) );
+   box-shadow: 0px 6px 9px 0px rgba(165, 94, 0, 0.25);
+   font-size: 22px;
+   z-index: 100;
+   &_position{
+      &_tp{
+         @extend %absolutePos;
+         left: 50%;
+         transform: translateX(-50%);
+         top:-30px;
+      }
+      &_bt{
+         @extend %absolutePos;
+         left: 50%;
+         transform: translateX(-50%);
+         bottom:-30px;
+      }
+   }
+   &:hover{
+     &::after{
+        margin-top: 5px;
+     }
+   }
+   &::after{
+      content: "";
+      transition: margin .5s ease;
+      width: 20px;
+      height: 20.52px;
+      background-image:$arrowDown;
+   }
+}
 .prodsCard {
    @extend %basePos;
    width: 100%;
    height: 331px;
-   border-radius: 4px;
-   box-shadow: 0px 6px 9px 0px rgba(165, 94, 0, 0.25);
    margin: 0 15px;
-   padding: 30px 0;
-   overflow: hidden;
-   &:hover .prodsCard__backImg {
-       background-position-y: 85px;
+   padding: 0;
+   &:hover .prodsCard__back{
+      transform: rotateY(0deg);
+      z-index: 2;
    }
-   &_yellow {
-       background: linear-gradient(180deg, rgba(243, 202, 34, 1), rgba(216, 122, 0, 1) 100%);
+   &:hover .prodsCard__front{
+      transform: rotateY(180deg);
+      z-index: -1;
    }
-   &_orange {
-       background: linear-gradient(180deg, rgba(231, 83, 0, 1), rgba(83, 30, 0, 1) 100%);
+   &_color{
+      &_yl{
+         background: linear-gradient(180deg, rgba(243, 202, 34, 1), rgba(216, 122, 0, 1) 100%);
+      }
+      &_or {
+         background: linear-gradient(180deg, rgba(231, 83, 0, 1), rgba(83, 30, 0, 1) 100%);
+      }
+      &_rd {
+         background: linear-gradient(180deg, rgba(204, 0, 0, 1), rgba(57, 0, 0, 1) 100%);
+      }
+      &_dr {
+         background: linear-gradient(180deg, rgba(122, 2, 0, 1), rgba(0, 0, 0, 1) 100%);
+      }
    }
-   &_red {
-       background: linear-gradient(180deg, rgba(204, 0, 0, 1), rgba(57, 0, 0, 1) 100%);
+   &_opacity{
+      &_sm{
+         opacity:.1;
+      }
    }
-   &_darkRed {
-       background: linear-gradient(180deg, rgba(122, 2, 0, 1), rgba(0, 0, 0, 1) 100%);
+   &__wrap{
+      width: 100%;
+   }
+   &__front{
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      border-radius: 4px;
+      box-shadow: 0px 6px 9px 0px rgba(165, 94, 0, 0.25);
+      backface-visibility: hidden;
+      overflow: hidden;
+      transition: transform .8s cubic-bezier(.2,.85,.4,1.275);
+   }
+   &__back{
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      border-radius: 4px;
+      backface-visibility: hidden;
+      transform: rotateY(-180deg);
+      overflow: hidden;
+      transition: transform .8s cubic-bezier(.2,.85,.4,1.275);
+   }
+   &__backDuo{
+      display: none;
+      position: absolute;
+      z-index: 10;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 30px 25px;
+      border-radius: 4px;
+      overflow: hidden;
+      &_active{
+         display: flex;
+      }
+   }
+   &_borderOpacity{
+      &_sm{
+         border-bottom:1px solid rgba(255,255,255,.5);
+      }
+   }
+   &__arrow{
+      @extend %absolutePos;
+      top:15px;
+      right: 15px;
+      width: 9.71px;
+      height: 16px;
+      background-image:$prodsCardArrow;
+      background-repeat: no-repeat;
+      &:hover{
+         opacity: .7;
+      }
+   }
+   &__table{
+      color:#fff;
+      font-size:(14rem / 16);
+   }
+   &__text{
+      font-size: (12rem / 16);
+      line-height: 14px;
+   }
+   &__tText{
+      @extend %robotoBold;
    }
    &__backImg {
        @extend %fullAbsolute;
        @extend %baseTransition;
        z-index: -2;
        &_yellow {
-           @include backImg('img/barel-golden-02.png', 75%, 50% 100px);
+           @include backImg('img/barel-golden-02.png', 75%, 50% 105px);
        }
        &_orange {
-           @include backImg('img/barel-amber-02.png', 75%, 50% 100px);
+           @include backImg('img/barel-amber-02.png', 75%, 50% 105px);
        }
        &_red {
-           @include backImg('img/barel-dark-02.png', 75%, 50% 100px);
+           @include backImg('img/barel-dark-02.png', 75%, 50% 105px);
        }
        &_darkRed {
-           @include backImg('img/barel-verydark-02.png', 75%, 50% 100px);
+           @include backImg('img/barel-verydark-02.png', 75%, 50% 105px);
        }
    }
    &__backGrad {
@@ -276,9 +378,128 @@
        font-size: (12rem / 16);
        padding: 10px 10px 0;
        margin: 0;
-       font-weight: 300;
+       font-weight: 400;
    }
    &__price {
-       font-weight: 400;
+       font-weight: 600;
+   }
+}
+.observe{
+   position: relative;
+   width: 100%;
+   background-color: $basicMainBack;
+   margin: -200px 0 0;
+   padding:250px 0 60px;
+   border-top-left-radius: 0px !important;
+   border-top-right-radius: 0px !important;
+   border-radius: 1000px / 200px;
+   z-index: -1;
+}
+.offers{
+   position: relative;
+   z-index: 1;
+   background-color: $basicWhite;
+   padding: 0 0 100px;
+   border-radius: 1000px / 200px;
+}
+.partners{
+   position: relative;
+   // z-index: -1;
+   min-height: 400px;
+   margin: -200px 0 0;
+   padding:250px 0 100px;
+   background-color: $basicMainBack;
+   border-radius: 1000px / 200px;
+   &__dots{
+      @extend %baseFlex;
+      @extend %justifyCenter;
+   }
+   &__dot{
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+      border-radius: 100%;
+      background-color: $basicWhite;
+      border: 2px solid #D55223;
+      box-shadow: 0px 6px 9px 0px rgba(165, 94, 0, 0.25);
+   }
+   &__dot.active{
+      background: radial-gradient(#D55223,#E28527);
+      border: none;
+   }
+}
+.partnersCard{
+   @extend %baseFlex;
+   @extend %flexFullCenter;
+   max-width: 360px;
+   width: 100%;
+   height: 200px;
+   background-color: transparent;
+   border: 2px solid #EBEBEB;
+   border-radius: 4px;
+}
+.payment{
+   position: relative;
+   z-index:-1;
+   border-top-left-radius: 0px !important;
+   border-top-right-radius: 0px !important;
+   margin: -200px 0 0;
+   padding:250px 0 100px;
+   border-radius: 1000px / 200px;
+   background-color: $basicWhite;
+   &__wrap{
+      position: relative;
+      z-index: 10;
+   }
+}
+.discover{
+   position: relative;
+   z-index: -2;
+   min-height: 700px;
+   margin: -200px 0 0;
+   border-top-left-radius: 0px !important;
+   border-top-right-radius: 0px !important;
+   background: linear-gradient(180deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
+   padding:250px 0 100px;
+   border-radius: 1000px / 200px
+}
+.news{
+   min-height: 500px;
+}
+.newsCard{
+   @extend %nullLink;
+   @extend  %basePos;
+   @include backImg('img/image-01.jpg',cover,center);
+   display: block;
+   border-radius: 4px;
+   overflow: hidden;
+   padding: 30px;
+   color:$basicWhite;
+   &:hover &__back{
+      opacity: .9;  
+   }
+   &:hover{
+      color: inherit;
+   }
+   &__back{
+      @extend %fullAbsolute;
+      background: linear-gradient(180deg, rgba(243, 202, 34, 1), rgba(216, 122, 0, 1) 100%);
+      opacity: .75;
+      transition: opacity .6s;
+      z-index: -1;
+   }
+   &__text{
+      font-size:(12rem / 16);
+      &_lg{
+         font-size:(14rem / 16);
+         line-height: 17px;
+         max-height: 34px;
+         overflow: hidden;
+      }
+   }
+   &__title{
+      @extend %freedokaFont;
+      font-size:(16rem / 16);
    }
 }

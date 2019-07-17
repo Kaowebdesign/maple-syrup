@@ -12,6 +12,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.owl-carousel .owl-item img {
+    display: initial;
+    width: auto;
+}
+
 @import "import/vars";
 @import "import/mixins";
 @import "import/header";
