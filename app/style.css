@@ -227,7 +227,7 @@ body {
     background-image: url("img/main-back-1.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 50% 50%; }
+    background-position: 50% top; }
     .main__bg::after {
       content: "";
       top: 0;
@@ -618,8 +618,7 @@ body {
   border-top-right-radius: 0px !important;
   padding: 60px 0 100px;
   background-color: #FBFBFB;
-  border-radius: 1000px / 200px;
-  z-index: 1; }
+  border-radius: 1000px / 200px; }
   .partners::before {
     content: "";
     display: block;
@@ -658,8 +657,7 @@ body {
   border-top-right-radius: 0px !important;
   padding: 60px 0 100px;
   border-radius: 1000px / 200px;
-  background-color: #ffffff;
-  z-index: 1; }
+  background-color: #ffffff; }
   .payment__wrap {
     position: relative;
     z-index: 10; }
@@ -667,12 +665,7 @@ body {
 .discover {
   position: relative;
   min-height: 420px;
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-  background: -webkit-gradient(linear, left top, left bottom, from(#e28527), to(#d55223));
-  background: linear-gradient(180deg, #e28527, #d55223 100%);
-  padding: 60px 0 50px;
-  border-radius: 1000px / 200px; }
+  padding: 60px 0 50px; }
   .discover::before {
     content: "";
     display: block;
@@ -683,6 +676,14 @@ body {
     left: 0;
     background-color: #e28527;
     z-index: -1; }
+  .discover::after {
+    content: "";
+    background: -webkit-gradient(linear, left top, left bottom, from(#e28527), to(#d55223));
+    background: linear-gradient(180deg, #e28527, #d55223 100%);
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-radius: 1000px / 200px;
+    z-index: -2; }
   .discover__leaf {
     position: absolute;
     top: 0;
@@ -692,7 +693,8 @@ body {
             transform: translateX(-50%);
     max-width: 1170px;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: -1; }
   .discover__oneLeaf {
     position: absolute;
     top: 40px;
@@ -768,8 +770,8 @@ body {
   .footer::before {
     content: "";
     position: absolute;
-    top: -50px;
-    left: 55px;
+    top: -49px;
+    left: 54px;
     display: block;
     width: 50px;
     height: 50px;
@@ -807,7 +809,11 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    background: #646477; }
+    background: #646477;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s; }
+    .footer__topBtn:hover {
+      background: #646477e0; }
     .footer__topBtn::after {
       content: "";
       display: block;
@@ -895,7 +901,7 @@ body {
   -webkit-transition: .5s;
   transition: .5s; }
 
-.prodsCard__backImg, .newsCard__back {
+.prodsCard__backImg, .discover::after, .newsCard__back {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -913,3 +919,21 @@ body {
 
 .caption_style_rg, .caption_style_or, .caption_style_gr, .caption_style_lg, .prodsCard__caption, .newsCard__title {
   font-family: 'Fredoka One', cursive; }
+
+@media only screen and (max-width: 1240px) {
+  .main_padding_lf {
+    padding-left: 55px; } }
+
+@media only screen and (max-width: 960px) {
+  .main_padding_top {
+    padding-top: 30px; }
+  .main__description {
+    font-size: 0.875rem; }
+  .main__info {
+    padding: 0 0 10px; }
+  .caption_size_md {
+    font-size: 0.9375rem; }
+  .caption_size_lg {
+    font-size: 1.25rem; }
+  .button_size_sm {
+    font-size: 0.875rem; } }
