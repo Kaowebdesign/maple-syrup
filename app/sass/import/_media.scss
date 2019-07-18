@@ -1,46 +1,72 @@
 @media only screen and (max-width:1440px) {}
 
 @media only screen and (max-width:1240px) {
-    .main{
-        &_padding_lf{
+    .main {
+        &_padding_lf {
             padding-left: 55px;
         }
     }
-   
 }
 
 @media only screen and (max-width:1024px) {
-
+    .main {
+        &__bg {
+            background-size: cover;
+        }
+    }
 }
 
 @media only screen and (max-width:960px) {
-    .main{
-        &_padding_top{
+    .main {
+        &_padding_top {
             padding-top: 30px;
         }
-        &__description{
+        &__description {
             font-size: (14rem / 16);
         }
-        &__info{
+        &__info {
             padding: 0 0 10px;
         }
     }
-    .caption{
-        &_size_md{
+    .caption {
+        &_size_md {
             font-size: (15rem / 16);
         }
-        &_size_lg{
-            font-size: (20rem / 16);    
+        &_size_lg {
+            font-size: (20rem / 16);
         }
     }
-    .button{
-        &_size_sm{
+    .button {
+        &_size_sm {
             font-size: (14rem / 16);
+        }
+    }
+    .buyCards {
+        .downBtn_position_tp {
+            display: none;
+        }
+    }
+    .barrel {
+        &__imgWrap {
+            max-width: 160px;
+            margin: 30px auto 0;
         }
     }
 }
 
-@media only screen and (max-width:768px) {}
+@media only screen and (max-width:768px) {
+    .leftBar {
+        padding: 5px 50px;
+        height: 55px;
+        width: 100%;
+        bottom: 0;
+        &__item {
+            &_border_bt {
+                border: none;
+            }
+        }
+    }
+}
 
 @media only screen and (max-width:480px) {}
 
