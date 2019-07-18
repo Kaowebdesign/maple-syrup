@@ -6,6 +6,11 @@
          padding-top: 50px;
       }
    }
+   &__hr{
+      width:100%;
+      height: 1px;
+      background-color:rgba(235, 235, 235, 1);
+   }
    &__bg{
       @extend %absolutePos;
       top: 0;
@@ -236,10 +241,12 @@
       font-size: (22rem / 16);
    }
 }
+.main-wrap{
+   margin-top: -80px;
+}
 .buyCards{
    position: relative;
    width: 100%;
-   margin-top: -80px;
    padding: 150px 0 100px;
    background-color: $basicWhite;
    border-radius: 1000px / 200px;
@@ -261,6 +268,17 @@
    box-shadow: 0px 6px 9px 0px rgba(165, 94, 0, 0.25);
    font-size: 22px;
    z-index: 100;
+   transition: background-image .5s;
+   &:hover{
+      background: radial-gradient(at top left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) );
+   }
+   &::after{
+      content: "";
+      transition: margin .5s ease;
+      width: 20px;
+      height: 20.52px;
+      background-image:$arrowDown;
+   }
    &_position{
       &_tp{
          @extend %absolutePos;
@@ -274,18 +292,6 @@
          transform: translateX(-50%);
          bottom:-30px;
       }
-   }
-   &:hover{
-     &::after{
-        margin-top: 5px;
-     }
-   }
-   &::after{
-      content: "";
-      transition: margin .5s ease;
-      width: 20px;
-      height: 20.52px;
-      background-image:$arrowDown;
    }
 }
 .prodsCard {
@@ -453,12 +459,22 @@
    position: relative;
    width: 100%;
    background-color: $basicMainBack;
-   margin: -200px 0 0;
-   padding:250px 0 60px;
+   // margin: -200px 0 0;
+   padding:60px 0 60px;
    border-top-left-radius: 0px !important;
    border-top-right-radius: 0px !important;
    border-radius: 1000px / 200px;
-   z-index: -1;
+   &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height:200px;
+      position: absolute;
+      top:-200px;
+      left: 0;
+      background-color: $basicMainBack;
+      z-index:-1;
+   }
 }
 .offers{
    position: relative;
@@ -469,12 +485,23 @@
 }
 .partners{
    position: relative;
-   // z-index: -1;
-   min-height: 400px;
-   margin: -200px 0 0;
-   padding:250px 0 100px;
+   border-top-left-radius: 0px !important;
+   border-top-right-radius: 0px !important;
+   padding:60px 0 100px;
    background-color: $basicMainBack;
    border-radius: 1000px / 200px;
+   z-index:1;
+   &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height:200px;
+      position: absolute;
+      top:-200px;
+      left: 0;
+      background-color: $basicMainBack;
+      z-index:-1;
+   }
    &__dots{
       @extend %baseFlex;
       @extend %justifyCenter;
@@ -506,31 +533,65 @@
 }
 .payment{
    position: relative;
-   z-index:-1;
    border-top-left-radius: 0px !important;
    border-top-right-radius: 0px !important;
-   margin: -200px 0 0;
-   padding:250px 0 100px;
+   padding:60px 0 100px;
    border-radius: 1000px / 200px;
    background-color: $basicWhite;
+   z-index: 1;
    &__wrap{
       position: relative;
       z-index: 10;
    }
 }
+
 .discover{
    position: relative;
-   z-index: -2;
-   min-height: 620px;
-   margin: -200px 0 0;
+   min-height: 420px;
    border-top-left-radius: 0px !important;
    border-top-right-radius: 0px !important;
    background: linear-gradient(180deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
-   padding:250px 0 50px;
-   border-radius: 1000px / 200px
+   padding:60px 0 50px;
+   border-radius: 1000px / 200px;
+   &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height:200px;
+      position: absolute;
+      top:-200px;
+      left: 0;
+      background-color: rgba(226, 133, 39, 1);
+      z-index:-1;
+   }
+   &__leaf{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1170px;
+      width: 100%;
+      height: 100%; 
+   }
+   &__oneLeaf{
+      position: absolute;
+      top:40px;
+      left:0;
+   }
+   &__twoLeaf{
+      position: absolute;
+      right: 10%;
+      top:-125px;
+      z-index:0;
+   }
+   &__thirdLeaf{
+      position: absolute;
+      left: 16%;
+      bottom: -50px;
+   }
 }
 .news{
-   min-height: 500px;
+   padding:60px 0 90px;
 }
 .newsCard{
    @extend %nullLink;
@@ -587,8 +648,11 @@
          background-image: $arrowRight;
          background-repeat: no-repeat;
       }
+      &:hover{
+         background: radial-gradient(#ffffff,#ffffff);
+      }
    }
 }
 .subscribe{
-   min-height: 500px;
+   padding:90px 0;
 }
