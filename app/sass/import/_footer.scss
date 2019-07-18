@@ -1,0 +1,107 @@
+.footer{
+    @extend %basePos;
+    background-color: $basicGrey;
+    &::before{
+        content:"";
+        position: absolute;
+        top:-50px;
+        left: 55px;
+        display: block;
+        width:50px;
+        height: 50px;
+        @include backImg('img/corner.svg',100%,initial);
+    }
+    &_padding{
+        &_tb{
+            padding: 20px 0;
+        }
+    }
+    &_border{
+        &_tb{
+            border-top:1px solid rgba(255,255,255,.2);
+            border-bottom:1px solid rgba(255,255,255,.2);
+        }
+    }
+    &__top{
+        padding: 60px 0 50px;
+    }
+    &__bottom{
+        color: $basicWhite;
+    }
+    &__caption{
+        @extend %robotoBold;    
+        color: $basicWhite;
+        font-size: (20rem / 16);
+    }
+    &__text{
+        font-size: (16rem / 16);
+        color: $footerText;
+        &_size_lg{
+            @extend %robotoBold;    
+            color: $basicWhite;
+            font-size: (20rem / 16);
+        }
+    }
+    &__list{
+        list-style-type: none;
+    }
+    &__age{
+        @extend %robotoBold;
+        font-size: (32rem / 16);
+        color: rgba(255,255,255,.65);
+    }
+    &__topBtn{
+        @extend %baseFlex;
+        @extend %flexFullCenter;
+        position: absolute;
+        top: -10px;
+        right: 36px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background: $basicGrey;
+        &::after{
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14.37px;
+            background-image:$footerTopBtn;
+            background-repeat: no-repeat;
+        }
+        &::before{
+            content:"";
+            position: absolute;
+            top:10px;
+            display: block;
+            width: 80px;
+            height: 60px;
+            @include backImg('img/round-corner.svg',100%,initial);
+            z-index: -1;
+        }
+    }
+}
+.socialBtn{
+    @extend %baseFlex;
+    @extend %flexFullCenter;
+    @extend %nullLink;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: radial-gradient(rgba(213, 82, 35, 1),rgba(226, 133, 39, 1));
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+    color: $basicWhite;
+    &:hover{
+        color: $basicWhite;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
+    }
+    &_margin{
+        &_lf{
+            margin: 0 20px 0 0;
+        }
+    }
+    &_size{
+        &_md{
+            font-size: (20rem / 16);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="34.859" viewBox="0 0 32 34.859">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.632" cy="0.372" r="0.705" gradientTransform="matrix(-0.774, 0.71, -0.78, -0.704, 1.412, 0.186)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e75300"/>
+      <stop offset="1" stop-color="#531e00"/>
+    </radialGradient>
+    <filter id="amber-leaf" x="0" y="0" width="32" height="34.859" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#amber-leaf)">
+    <path id="amber-leaf-2" data-name="amber-leaf" d="M289.209,229.116l-.5-.229a.769.769,0,0,1-.423-.9l.917-3.34a.769.769,0,0,0-.884-.96l-2.941.551a.769.769,0,0,1-.886-.562l-.107-.41a.769.769,0,0,0-1.258-.378l-2.27,2.039a.769.769,0,0,1-1.267-.73l1.117-5.351a.769.769,0,0,0-1.1-.845l-.751.376a.769.769,0,0,1-1.017-.314l-2-3.608a.769.769,0,0,0-1.345,0l-2,3.608a.769.769,0,0,1-1.017.314l-.751-.376a.769.769,0,0,0-1.1.845l1.117,5.351a.769.769,0,0,1-1.267.73l-2.27-2.039a.769.769,0,0,0-1.258.378l-.107.41a.769.769,0,0,1-.886.562l-2.941-.551a.769.769,0,0,0-.884.96l.917,3.34a.769.769,0,0,1-.423.9l-.5.229a.769.769,0,0,0-.17,1.3l6.493,5.328a.77.77,0,0,1,.222.891l-.257.617a.769.769,0,0,0,.837,1.055l5.522-.92a.77.77,0,0,1,.67.215l.085.085a.77.77,0,0,1,.224.583l-.346,6.842a.769.769,0,0,0,.768.808h0a.769.769,0,0,0,.768-.808l-.346-6.842a.769.769,0,0,1,.224-.583l.085-.085a.77.77,0,0,1,.67-.215l5.522.92a.769.769,0,0,0,.837-1.055l-.257-.617a.769.769,0,0,1,.222-.891l6.493-5.328A.769.769,0,0,0,289.209,229.116Z" transform="translate(-259.16 -213.55)" fill="url(#radial-gradient)"/>
+  </g>
+</svg>

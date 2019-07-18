@@ -23,5 +23,6 @@ $( document ).ready(function() {
         e.preventDefault();
         let thisParent = $(this).parent().parent();
         thisParent.find('.prodsCard__backDuo').toggleClass('prodsCard__backDuo_active');
+        thisParent.find('.prodsCard__back').toggleClass('prodsCard__back_hide');
     });
 });

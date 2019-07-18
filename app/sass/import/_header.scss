@@ -189,6 +189,9 @@
         &_sm{
             padding: 7px 20px;
         }
+        &_xl{
+            padding: 6px 40px;
+        }
         &_md{
             padding: 12px 40px;
         }
@@ -207,15 +210,26 @@
             transition: box-shadow .5s;
             background: linear-gradient(269deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
             box-shadow: 0px 3px 6px 0px #D55223; 
+            color: $basicWhite;
+            border: none;
             &:hover{
                 box-shadow: 0px 4px 16px 0px #D55223;
+                color: $basicWhite;
+            }
+        }
+        &_ob{
+            transition: box-shadow .5s;
+            background: linear-gradient(269deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
+            box-shadow: 0px 3px 6px 0px rgba(0,0,0,.15); 
+            &:hover{
+                box-shadow: 3px 5px 30px 0px rgba(0,0,0,.35);
                 color: $basicWhite;
             }
         }
         &_wo{
             transition: box-shadow .5s;
             background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 236, 217, 1) 100%);
-            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
             &:hover{
                 color: $basicOrange;
                 box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);

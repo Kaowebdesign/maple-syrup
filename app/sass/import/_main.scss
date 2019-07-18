@@ -49,10 +49,66 @@
    background-color: $basicGrey;
    border-radius: 0px 4px 0px 0px;
    z-index: 700;
+   padding: 50px 0;
+   overflow: hidden;
+   &_color{
+      &_wh{
+         color:$basicWhite;
+      }
+      &_gr{
+         color: rgba(255,255,255,.5);        
+      }
+   }
+   &__text{
+      font-size:(12rem / 16);
+      &_size{
+         &_sm{
+            font-size: (10rem / 16);
+         }
+      }
+      &_style{
+         &_bl{
+            @extend %robotoBold;
+            line-height: 14px;
+         }
+      }
+   }
+   &__item{
+      @extend %nullLink;
+      display: block;
+      padding: 15px 5px;  
+      &_border_bt{
+         border-bottom: 1px solid    rgba(255,255,255,.5); 
+      }
+      &_isHover{
+         &:hover{
+            background:#505063;
+         }
+      } 
+   }
+   &__btn{
+      @extend %nullLink;
+      @extend %baseFlex;
+      @extend %flexFullCenter;
+      display: block;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      background-color: $basicWhite;
+      box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.15);
+      &:hover{
+         box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
+      }
+      &::after{
+         content:"";
+         display: block;
+         width: 15px;
+         height: 15px;
+         background-image: $comment;
+         background-repeat: no-repeat;
+      }
+   }
 }
-
-
-
 .caption {
    &_style{
       &_lt{
@@ -96,6 +152,11 @@
          font-size: (32rem / 16);
       }
    }
+   &_shadow{
+      &_or{
+         text-shadow: 0px 6px 9px rgba(165, 94, 0, 1);
+      }
+   }
 }
 
 .barrel-wrap{
@@ -130,6 +191,7 @@
    &__img{
       display: block;
       max-width: 100%;
+      width:100% !important;
       height: auto;
    }
    &__dotsWrap{
@@ -286,6 +348,9 @@
       transform: rotateY(-180deg);
       overflow: hidden;
       transition: transform .8s cubic-bezier(.2,.85,.4,1.275);
+      &_hide{
+         display: none !important;
+      }
    }
    &__backDuo{
       display: none;
@@ -456,12 +521,12 @@
 .discover{
    position: relative;
    z-index: -2;
-   min-height: 700px;
+   min-height: 620px;
    margin: -200px 0 0;
    border-top-left-radius: 0px !important;
    border-top-right-radius: 0px !important;
    background: linear-gradient(180deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
-   padding:250px 0 100px;
+   padding:250px 0 50px;
    border-radius: 1000px / 200px
 }
 .news{
@@ -474,7 +539,7 @@
    display: block;
    border-radius: 4px;
    overflow: hidden;
-   padding: 30px;
+   padding: 20px;
    color:$basicWhite;
    &:hover &__back{
       opacity: .9;  
@@ -502,4 +567,28 @@
       @extend %freedokaFont;
       font-size:(16rem / 16);
    }
+   &__arrow{
+      @extend %absolutePos;
+      @extend %baseFlex;
+      @extend %flexFullCenter;
+      width: 40px;
+      height: 40px;
+      bottom: -20px;
+      left: 50px;
+      z-index:1;
+      border-radius: 100%;
+      background: radial-gradient(#FFECD9,#FFFFFF);
+      box-shadow: 0px 6px 9px 0px rgba(165, 94, 0, 0.25);
+      &::after{
+         content:'';
+         display: block;
+         width: 14.37px;
+         height:14px;
+         background-image: $arrowRight;
+         background-repeat: no-repeat;
+      }
+   }
+}
+.subscribe{
+   min-height: 500px;
 }
