@@ -2,26 +2,27 @@
     @extend %basePos;
     background-color: $basicWhite;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.10);
-    padding-left: 50px;
     height: 70px;
     &__wrap {
         width: 100%;
     }
 }
-#preloader{
+
+#preloader {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 998;
 }
-.preloader{
+
+.preloader {
     @extend %baseFlex;
     @extend %flexFullCenter;
     width: 100%;
     height: 100%;
-    background:$preloaderBack;
+    background: $preloaderBack;
 }
 
 .logo {
@@ -30,91 +31,90 @@
     &:hover {
         opacity: .8;
     }
-    &__wrap{
+    &__wrap {
         @extend %baseFlex;
         @extend %alignCenter;
     }
-    &__imgWrap{
-        &_padding{
-            &_sm{
+    &__imgWrap {
+        &_padding {
+            &_sm {
                 padding: 10px;
             }
-            &_lg{
+            &_lg {
                 padding: 18px;
             }
         }
     }
-    &__img{
-        &_size{
-            &_sm{
-                max-width:24px;
+    &__img {
+        &_size {
+            &_sm {
+                max-width: 24px;
             }
         }
     }
-    &__topText{
+    &__topText {
         @extend %robotoBase;
         @extend %robotoBold;
-        &_ltSpacing{
-            &_sm{
+        &_ltSpacing {
+            &_sm {
                 letter-spacing: 1.65px;
             }
-            &_lg{
+            &_lg {
                 letter-spacing: 2.9px;
             }
         }
-        &_size{
-            &_sm{
+        &_size {
+            &_sm {
                 font-size: (18rem / 16);
                 line-height: 18px;
             }
-            &_lg{
+            &_lg {
                 font-size: (31rem / 16);
                 line-height: 26px;
             }
         }
-        &_color{
-            &_or{
+        &_color {
+            &_or {
                 color: $preloaderDuo;
             }
-            &_yl{
+            &_yl {
                 color: $preloaderUno;
             }
         }
     }
-    &__text{
+    &__text {
         @extend %robotoBase;
         @extend %robotoRegular;
-        &_ltSpacing{
-            &_sm{
+        &_ltSpacing {
+            &_sm {
                 letter-spacing: 9px;
             }
-            &_lg{
-                 letter-spacing: 16px;
+            &_lg {
+                letter-spacing: 16px;
             }
         }
-        &_size{
-            &_sm{
-                font-size:(14rem / 16);
+        &_size {
+            &_sm {
+                font-size: (14rem / 16);
             }
-            &_lg{
+            &_lg {
                 font-size: (24rem / 16);
             }
         }
-        &_color{
-            &_bl{
-                color:$basicBlack;
+        &_color {
+            &_bl {
+                color: $basicBlack;
             }
-            &_gr{
+            &_gr {
                 color: $preloaderText;
             }
         }
     }
-    
 }
 
 .menuBar {
     @extend %baseTransition;
-    position:fixed;
+    position: fixed;
     top: 22px;
     left: 14px;
     z-index: 990;
@@ -141,7 +141,7 @@
     color: $basicWhite;
     font-size: (12em / 16);
     overflow: hidden;
-    &_padding{
+    &_padding {
         padding: 3.2px 20px;
     }
     &__text {
@@ -170,10 +170,10 @@
         display: block;
         color: inherit;
         padding: 8px 16px;
-        &_color{
-             &_bl{
+        &_color {
+            &_bl {
                 color: $basicBlack;
-             }
+            }
         }
         &:hover {
             opacity: .8;
@@ -181,75 +181,75 @@
     }
 }
 
-.button{
+.button {
     @extend %nullLink;
     text-transform: uppercase;
     border-radius: 4px;
-    &_padding{
-        &_sm{
+    &_padding {
+        &_sm {
             padding: 7px 20px;
         }
-        &_xl{
+        &_xl {
             padding: 6px 40px;
         }
-        &_md{
+        &_md {
             padding: 12px 40px;
         }
     }
-    &_style{
-        &_lt{
-            transition: background-color  .5s;
+    &_style {
+        &_lt {
+            transition: background-color .5s;
             border: 1px solid #EBEBEB;
-            background-color:$basicWhite;
-            &:hover{
+            background-color: $basicWhite;
+            &:hover {
                 background: #eaeaea;
                 color: inherit;
             }
         }
-        &_or{
+        &_or {
             transition: box-shadow .5s;
             background: linear-gradient(269deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
-            box-shadow: 0px 3px 6px 0px #D55223; 
+            box-shadow: 0px 3px 6px 0px #D55223;
             color: $basicWhite;
             border: none;
-            &:hover{
+            &:hover {
                 box-shadow: 0px 4px 16px 0px #D55223;
                 color: $basicWhite;
             }
         }
-        &_ob{
+        &_ob {
             transition: box-shadow .5s;
             background: linear-gradient(269deg, rgba(226, 133, 39, 1), rgba(213, 82, 35, 1) 100%);
-            box-shadow: 0px 3px 6px 0px rgba(0,0,0,.15); 
-            &:hover{
-                box-shadow: 3px 5px 30px 0px rgba(0,0,0,.35);
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .15);
+            &:hover {
+                box-shadow: 3px 5px 30px 0px rgba(0, 0, 0, .35);
                 color: $basicWhite;
             }
         }
-        &_wo{
+        &_wo {
             transition: box-shadow .5s;
             background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 236, 217, 1) 100%);
             box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
-            &:hover{
+            &:hover {
                 color: $basicOrange;
                 box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.35);
                 background: linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%);
             }
         }
     }
-    &_color{
-        &_bl{
+    &_color {
+        &_bl {
             color: $basicBlack;
         }
-        &_or{
+        &_or {
             color: $basicOrange;
         }
-        &_wh{
+        &_wh {
             color: $basicWhite;
         }
     }
-    &_size{
-        &_sm{
+    &_size {
+        &_sm {
             font-size: (14rem / 16);
             font-weight: 500;
         }
