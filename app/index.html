@@ -21,6 +21,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
     <script src="js/preloader.js"></script>
+    <script src="js/scrollUp.js"></script>
+    <script src="js/scrolling.js"></script>
   </head>
   <body> 
     <header class="header d-flex align-items-center d-lg-block">        
@@ -128,9 +130,9 @@
         </div>
       </div>
       <div class="main-wrap">           
-        <div class="buyCard-wrap">
+        <div class="buyCard-wrap" id="byCard">
           <div class="buyCards">
-            <div class="main_padding_lf"><a class="downBtn downBtn_position_tp" href="#"></a>
+            <div class="main_padding_lf"><a class="downBtn downBtn_position_tp" href="#byCard"></a>
               <div class="container">
                 <div class="row">   
                   <div class="col-lg col-md"></div>
@@ -422,11 +424,11 @@
                     </div>
                   </div>
                 </div>
-              </div><a class="downBtn downBtn_position_bt" href="#"></a>
+              </div><a class="downBtn downBtn_position_bt" href="#observe"></a>
             </div>
           </div>
         </div>
-        <div class="observe-wrap">
+        <div class="observe-wrap" id="observe">
           <div class="observe">
             <div class="main_padding_lf">
               <div class="container">
@@ -444,11 +446,11 @@
                 <div class="row">
                   <div class="col text-center my-5">           <a class="button button_padding_md button_color_wh button_style_or button_size_sm m-2" href="#">HOW TO TRADE</a></div>
                 </div>
-              </div><a class="downBtn downBtn_position_bt" href="#"></a>
+              </div><a class="downBtn downBtn_position_bt" href="#offers"></a>
             </div>
           </div>
         </div>
-        <div class="offers mt-5">
+        <div class="offers mt-5" id="offers">
           <div class="main_padding_lf">
             <div class="container">
               <div class="row">
@@ -495,10 +497,10 @@
                   <p class="buyCards__text p-0">All means of shipment are available which allows door-to-door delivery.</p>
                 </div>
               </div>
-            </div><a class="downBtn downBtn_position_bt" href="#"></a>
+            </div><a class="downBtn downBtn_position_bt" href="#partners"></a>
           </div>
         </div>
-        <div class="partners">
+        <div class="partners" id="partners">
           <div class="main_padding_lf">
             <div class="container">
               <div class="row">
@@ -518,10 +520,10 @@
                   <div class="partnersCard"><img class="img-fluid" src="img/25-cropped-Vermont-Maple-Syrup.png" alt="cropped-Vermont-Maple-Syrup"></div>
                 </div>
               </div>
-            </div><a class="downBtn downBtn_position_bt" href="#"></a>
+            </div><a class="downBtn downBtn_position_bt" href="#payment"></a>
           </div>
         </div>
-        <div class="payment">
+        <div class="payment" id="payment">
           <div class="main_padding_lf">
             <div class="container payment__wrap">
               <div class="row">
@@ -544,10 +546,10 @@
                 </div>
                 <div class="col"></div>
               </div>
-            </div><a class="downBtn downBtn_position_bt" href="#"></a>
+            </div><a class="downBtn downBtn_position_bt" href="#discover"></a>
           </div>
         </div>
-        <div class="discover-wrap">
+        <div class="discover-wrap" id="discover">
           <div class="discover d-flex align-items-center">
             <div class="discover__leaf">
               <div class="discover__oneLeaf"><img class="img-fluid" src="img/leaf-01.png" alt="leaf"></div>
@@ -563,10 +565,10 @@
               <div class="row">
                 <div class="col text-center mt-5"><a class="button button_padding_md button_color_or button_style_wo button_size_sm mt-1" href="#">GET STARTED</a></div>
               </div>
-            </div><a class="downBtn downBtn_position_bt" href="#">   </a>
+            </div><a class="downBtn downBtn_position_bt" href="#news">   </a>
           </div>
         </div>
-        <div class="news">
+        <div class="news" id="news">
           <div class="main_padding_lf">
             <div class="container payment__wrap">
               <div class="row">
@@ -671,7 +673,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer"><a class="footer__topBtn" href="#totop"></a>
+    <footer class="footer"><a class="footer__topBtn" href="#" id="upBtn"></a>
       <div class="main_padding_lf">
         <div class="container footer__top">
           <div class="row footer_width_max">
