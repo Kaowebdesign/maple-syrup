@@ -5,9 +5,6 @@
         &_top {
             padding-top: 50px;
         }
-        &_lf {
-            // padding-left:55px;
-        }
     }
     &__hr {
         width: 100%;
@@ -45,6 +42,100 @@
     &__description {
         line-height: 19px;
         font-weight: 300;
+    }
+}
+
+.menuBar {
+    @extend %baseTransition;
+    position: fixed;
+    top: 22px;
+    left: 14px;
+    display: block;
+    width:$width-line;
+    height:$height-icon;
+    z-index: 990;
+    &:hover {
+        opacity: .7;
+    }
+    &__item {
+        position:absolute;
+        left:0;
+        display: block;
+        width:$width-line;
+        height:$height-line;
+        border-radius: 1px;
+        background-color: $barsColor;
+        transition: all $transition-time;
+        -webkit-transition: all $transition-time;
+        -moz-transition: all $transition-time;
+        &-1{
+            top:0;
+        }
+        &-2{
+            top:50%;
+        }
+        &-3{
+            top:100%;
+        }
+    }
+    &_active{
+        .menuBar__item-1{
+            transform: translateY($translateY) translateX($translateX) rotate($rotation);
+            -webkit-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+            -moz-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+        }
+        .menuBar__item-2{
+            opacity:0;
+        }
+        .menuBar__item-3{
+            transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+            -webkit-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+            -moz-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+        }
+    }
+}
+
+.menu-left{
+    position: fixed;
+    left:-241px;
+    bottom:0;
+    width: 240px;
+    height: calc(100vh - 114px);
+    background: $basicGrey;
+    z-index:998;
+    border-radius:  0px 4px 0px 0px;
+    transition: left .6s;
+    box-shadow: 3px 0px 6px 0px rgba(0,0,0,.1);
+    overflow: hidden;
+    &_active{
+        left:0 !important;
+    }
+    &_border_wh{
+        border-bottom:1px solid rgba(255,255,255,.2);
+    }
+    &__wrap{
+        padding: 14px;
+    }
+    &__btnGroup{
+        display: none;
+        padding:30px 14px;
+        background: #4F4F5E;
+    }
+    &__list{
+        list-style-type: none;
+    }
+    &__item{
+        background: transparent; 
+    }
+    &__link{
+        @extend %nullLink;
+        @extend %robotoBold;
+        display: block;
+        color:$basicWhite;
+        padding: 10px 0;
+        &:hover{
+            color:rgba(255,255,255,.6);
+        }
     }
 }
 
@@ -612,9 +703,17 @@
 .news {
     padding: 60px 0 90px;
 }
-
-.newsCard {
+.newsCard-container{
+    position: relative;
     @extend %nullLink;
+    &:hover .newsCard__back {
+        opacity: .9;
+    }
+    &:hover {
+        color: inherit;
+    }
+}
+.newsCard {
     @extend %basePos;
     @include backImg('img/image-01.jpg', cover, center);
     display: block;
@@ -623,12 +722,6 @@
     padding: 20px;
     color: $basicWhite;
     max-width: 263px;
-    &:hover &__back {
-        opacity: .9;
-    }
-    &:hover {
-        color: inherit;
-    }
     &__back {
         @extend %fullAbsolute;
         background: linear-gradient(180deg, rgba(243, 202, 34, 1), rgba(216, 122, 0, 1) 100%);

@@ -112,25 +112,6 @@
     }
 }
 
-.menuBar {
-    @extend %baseTransition;
-    position: fixed;
-    top: 22px;
-    left: 14px;
-    z-index: 990;
-    &:hover {
-        opacity: .7;
-    }
-    &__item {
-        display: block;
-        width: 28px;
-        height: 4px;
-        border-radius: 1px;
-        background-color: $barsColor;
-        margin: 0 0 5.5px;
-    }
-}
-
 .welcome {
     max-width: 458px;
     width: 100%;

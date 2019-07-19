@@ -1,6 +1,8 @@
 $(document).ready(function() {
     // vars
-    let prodsBtn = $('#prodsCard .prodsCard__arrow');
+    let prodsBtn = $('#prodsCard .prodsCard__arrow'),
+        menuBtn = $('#menuBar'),
+        leftMenu = $('#menu-left');
     // barrel carousel
     $("#barrelCarousel").owlCarousel({
         items: 1,
@@ -36,4 +38,9 @@ $(document).ready(function() {
         thisParent.find('.prodsCard__backDuo').toggleClass('prodsCard__backDuo_active');
         thisParent.find('.prodsCard__back').toggleClass('prodsCard__back_hide');
     });
+    menuBtn.on('click',function(e){
+        e.preventDefault();
+        leftMenu.toggleClass('menu-left_active');
+        menuBtn.toggleClass('menuBar_active');
+    })
 });

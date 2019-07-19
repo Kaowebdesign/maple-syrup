@@ -8,6 +8,13 @@
     }
 }
 
+
+@media only screen and (max-width:1140px) {
+    .button_padding_md{
+        padding: 12px 15%;
+    }
+}
+
 @media only screen and (max-width:1024px) {
     .main {
         &__bg {
@@ -19,7 +26,7 @@
     }
 }
 
-@media only screen and (max-width:960px) {
+@media only screen and (max-width:992px) {
     .main {
         &_padding_top {
             padding-top: 30px;
@@ -30,6 +37,9 @@
         &__info {
             padding: 0 0 10px;
         }
+    }
+    .main-wrap{
+        margin-top: -120px;
     }
     .caption {
         &_size_md {
@@ -49,6 +59,14 @@
             display: none;
         }
     }
+    .barrel-wrap{
+        &::after{
+            content: "";
+            bottom: -58%;
+            width: 310px;
+            height: 354px;
+        }
+    }
     .barrel {
         &__imgWrap {
             max-width: 160px;
@@ -56,14 +74,13 @@
         }
     }
     .leftBar {
-        padding: 5px 50px;
-        height: 70px;
+        padding: 5px;
+        height: 65px;
         width: 100%;
         bottom: 0;
         border-radius: 4px 4px 0 0;
-        display: none !important;
         &__item {
-            padding: 0 15px;
+            padding: 5px 10px;
             &_border_bt {
                 border: none;
             }
@@ -79,15 +96,51 @@
         &__top {
             padding: 30px 0;
         }
+        padding-bottom: 60px;
     }
     .main {
         &_padding_lf {
             padding-left: 0;
         }
     }
+    .menuBar{
+        left: initial;
+        right: 14px;
+    }
+    .button_padding_md {
+        padding: 12px 7%;
+    }
+    .menu-left{
+        bottom: initial;
+        top:70px;
+        height:calc(100vh - 70px);
+        &__btnGroup{
+            display: block;
+        }
+    }
 }
 
 @media only screen and (max-width:768px) {
+    .header{
+        position: fixed;
+        top: 0;
+        left:0;
+        width: 100%;
+        z-index: 900;
+    }
+    .main{
+        padding-top: 70px;
+    }
+    .logo__img{
+        max-width: 30px;
+    }
+    .logo__topText_size_lg{
+        font-size: (20rem / 16);
+    }
+    .logo__text_size_lg{
+        font-size: (12rem / 16);
+        letter-spacing: 14px;
+    }
     .caption_style_lg {
         font-size: (20rem / 16);
     }
@@ -97,8 +150,70 @@
     .discover__leaf {
         display: none;
     }
+    .button_padding_xl{
+        padding: 6px 15%;
+    }
+    .berrel__navItem {
+        background: transparent;
+        &_prev {
+            margin: 0 0 0 20px;
+           
+        }
+        &_next {
+            margin: 0 20px 0 0;
+        }
+    }
+    .caption{
+        font-size: (20rem / 16);
+    }
+    .buyCards__text{
+        font-size: (14rem / 16);
+    }
+    .footer__copy{
+        font-size: (12rem / 16);
+        padding: 5px 10px;
+    }
+    .leftBar {
+        height: 55px;
+        &__item {
+            padding: 5px 10px;
+        }
+        &__text{
+            font-size: (10rem / 16);
+        }
+        &__img{
+            max-width: 20px;
+        }
+    }
+    .prodsCard__backImg{
+        background-size: 65%;
+    }
+    .menu-left{
+        width: 100%;
+        left: -100%;
+        &__btnGroup{
+            text-align: center;
+        }
+        &__wrap{
+            max-width: 300px;
+            margin:0 auto;
+        }
+    }
 }
 
-@media only screen and (max-width:480px) {}
+@media only screen and (max-width:480px) {
+    .btn,
+    .button{
+        font-size: (12rem / 16);
+    }
+}
+@media only screen and (max-width:380px) {
+    .leftBar {
+        height: 55px;
+        &__item{
+            padding: 4px;
+        }
+    }
+}
 
 @media only screen and (max-width:320px) {}

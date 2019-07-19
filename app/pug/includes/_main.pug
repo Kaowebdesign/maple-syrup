@@ -1,8 +1,26 @@
 main.main
-    a(href="#").menuBar
-        span.menuBar__item
-        span.menuBar__item
-        span.menuBar__item
+    a(href="#").menuBar#menuBar
+        span.menuBar__item.menuBar__item-1
+        span.menuBar__item.menuBar__item-2
+        span.menuBar__item.menuBar__item-3
+    .menu-left#menu-left
+        .menu-left__btnGroup
+            a(href="#").button.button_padding_sm.button_color_bl.button_style_lt.button_size_sm.m-2 Sign in
+            a(href="#").button.button_padding_sm.button_color_wh.button_style_or.button_size_sm.m-2 Sign up
+        .menu-left__wrap
+            ul.menu-left__list
+                li.menu-left__item.menu-left_border_wh
+                    a(href="#").menu-left__link Trading
+                li.menu-left__item.menu-left_border_wh
+                    a(href="#").menu-left__link Regulations
+                li.menu-left__item.menu-left_border_wh
+                    a(href="#").menu-left__link Specifications
+                li.menu-left__item.menu-left_border_wh
+                    a(href="#").menu-left__link About
+                li.menu-left__item.menu-left_border_wh
+                    a(href="#").menu-left__link News
+                li.menu-left__item
+                    a(href="#").menu-left__link Contacts
     #preloader
         .preloader
             .logo__wrap
@@ -11,24 +29,24 @@ main.main
                 .logo__textWrap
                     p.logo__topText.logo__topText_size_lg.logo__topText_ltSpacing_lg.logo__topText_color_or.m-0  MAPLE <span class="logo__topText_color_yl">SYRUP</span>
                     p.logo__text.logo__text_ltSpacing_lg.logo__text_size_lg.logo__text_color_gr.m-0 EXCHANGE
-    aside.leftBar.d-flex.flex-row.justify-content-center.align-items-center.justify-content-lg-start.flex-lg-column
+    aside.leftBar.d-flex.flex-row.justify-content-between.justify-content-sm-center.align-items-between.justify-content-lg-start.flex-lg-column
         .leftBar__item.leftBar__item_border_bt.text-center
             p.leftBar__text.leftBar_color_wh.m-0 JUL19
             p.leftBar__text.leftBar_color_wh.leftBar__text_style_bl.m-0 01:45 AM EST
         a(href="#").leftBar__item.leftBar__item_isHover.leftBar__item_border_bt.text-center
-            img(src="img/golden-leaf.svg" alt="leaf")
+            img(src="img/golden-leaf.svg" alt="leaf").leftBar__img
             p.leftBar__text.leftBar__text_style_bl.leftBar_color_wh.m-0 Golden
             p.leftBar__text.m-0.leftBar_color_gr GMS
         a(href="#").leftBar__item.leftBar__item_isHover.leftBar__item_border_bt.text-center
-            img(src="img/amber-leaf.svg" alt="leaf")
+            img(src="img/amber-leaf.svg" alt="leaf").leftBar__img
             p.leftBar__text.leftBar__text_style_bl.leftBar_color_wh.m-0 Amber
             p.leftBar__text.m-0.leftBar_color_gr AMS
         a(href="#").leftBar__item.leftBar__item_isHover.leftBar__item_border_bt.text-center
-            img(src="img/dark-leaf.svg" alt="leaf")
+            img(src="img/dark-leaf.svg" alt="leaf").leftBar__img
             p.leftBar__text.leftBar__text_style_bl.leftBar_color_wh.m-0 Dark
             p.leftBar__text.m-0.leftBar_color_gr DMS
         a(href="#").leftBar__item.leftBar__item_isHover.leftBar__item_border_bt.text-center
-            img(src="img/very-dark-leaf.svg" alt="leaf")
+            img(src="img/very-dark-leaf.svg" alt="leaf").leftBar__img
             p.leftBar__text.leftBar__text_style_bl.leftBar_color_wh.m-0 <span class="leftBar__text_size_sm">Very</span> Dark
             p.leftBar__text.m-0.leftBar_color_gr VMS
         .leftBar__item
@@ -47,7 +65,7 @@ main.main
                                 .col
                                     a(href="#").d-inline-block.button.button_padding_md.button_color_or.button_style_wo.button_size_sm.mt-1 START TRADING
                     .col-lg-1
-                    .col-lg-3.col-12.col-sm-6.d-flex.align-items-end.justify-content-center.barrel-wrap.mx-auto
+                    .col-lg-3.col-10.col-sm-6.d-flex.align-items-end.justify-content-center.barrel-wrap.mx-auto
                         #barrelCarousel.owl-carousel.owl-theme
                             a(href="#").barrel
                                 .barrel__imgWrap
@@ -67,11 +85,11 @@ main.main
                     a(href="#").downBtn.downBtn_position_tp
                     .container
                         .row    
-                            .col-md
-                            .col-12.col-md-6
+                            .col-lg.col-md
+                            .col-12.col-md-8.col-lg-6
                                 h2.caption.caption_style_or Buy And Sell Maple Syrup <br> In Few Simple Steps
                                 p.buyCards__text Become a trader by performing a series of easy actions. <br> Widen your space of possibilities in Maple Syrup wholesale.
-                            .col-md
+                            .col-lg.col-md
                         .row.prodsCard-wrap.d-flex.flex-lg-row.flex-column.align-items-center#prodsCard.mb-3
                             .col-10.col-sm-5.col-md-4.col-lg.m-2.prodsCard.wow.fadeInUp(data-wow-delay="2s")
                                 .prodsCard__front.prodsCard_color_yl.d-flex.justify-content-center
@@ -295,11 +313,11 @@ main.main
                 .main_padding_lf
                     .container
                         .row
-                            .col-md
-                            .col-12.col-md-6.mt-5
+                            .col-md.col-lg
+                            .col-12.col-md-8.col-lg-6.mt-5
                                 h2.caption.caption_style_or Observe All Trading Tools <br> In One Screen
                                 p.buyCards__text The high usability of our interface aligns with users expectations. Participants intuitively know what to do without losing attention on platform design.
-                            .col-md
+                            .col-md.col-lg
                         .row
                             .col.text-center
                                 img(src="img/isometric-board-00001.png" alt="isometric-board").img-fluid
@@ -311,11 +329,11 @@ main.main
             .main_padding_lf
                 .container
                     .row
-                        .col-md
-                        .col-12.col-md-6.mt-5
+                        .col-md.col-lg
+                        .col-12.col-md-8.col-lg-6.mt-5
                             h2.caption.caption_style_or What Do We Offer?
                             p.buyCards__text The high usability of our interface aligns with users expectations. Participants intuitively know what to do without losing attention on platform design.
-                        .col-md            
+                        .col-md.col-lg           
                     .row.offers__cards.d-flex.flex-column.flex-lg-row.align-items-center
                         .col-12.col-lg-3.offerCard.text-center.my-3
                             img(src="img/illustration-01-02.png", alt="offer").img-fluid
@@ -355,11 +373,11 @@ main.main
             .main_padding_lf
                 .container
                     .row
-                        .col-md
-                        .col-12.col-md-6.mt-5
+                        .col-md.col-lg
+                        .col-12.col-md-8.col-lg-6.mt-5
                             h2.caption.caption_style_or Our Partners
                             p.buyCards__text On our platform you can find the finest syrup from the largest producers in the industry. Nevertheless, whether it is a vast manufacture or a small family enterprise – everybody is welcome here on MSE.
-                        .col-md 
+                        .col-md.col-lg
                     .row
                         .col
                         #partnerCarousel.owl-carousel.owl-theme
@@ -376,11 +394,11 @@ main.main
             .main_padding_lf
                 .container.payment__wrap
                     .row
-                        .col-md
-                        .col-12.col-md-6.mt-5
+                        .col-md.col-lg
+                        .col-12.col-md-8.col-lg-6.mt-5.mb-2.mb-lg-0
                             h2.caption.caption_style_or Payment &amp; Delivery
                             p.buyCards__text Flexible payment and shipping terms let buyers choose the most convenient way of purchasing the syrup and appropriate delivery method afterwards.
-                        .col-md
+                        .col-md.col-lg
                     .row
                         .col
                         .col-8
@@ -416,52 +434,56 @@ main.main
             .main_padding_lf
                 .container.payment__wrap
                     .row
-                        .col-md
-                        .col-12.col-md-6.mt-5
+                        .col-md.col-lg
+                        .col-12.col-md-8.col-lg-6.mt-5
                             h2.caption.caption_style_or Sweet News 
                             p.buyCards__text Only relevant and helpful information for our traders on the latest news and events from the world of Maple Syrup, Trades and Finance.
-                        .col-md
-                    .row
+                        .col-md.col-lg
+                    .row.text-center
                         .col-12.col-lg-3
-                            a(href="#").newsCard.mx-auto.my-3.m-lg-0
-                                .newsCard__back
-                                .newsCard__wrap
-                                    .newsCard__top.d-flex.justify-content-between
-                                        p.newsCard__text 27 July 2019
-                                        p.newsCard__text 4:30 AM EST
-                                    h2.newsCard__title We help to get better deals in maple syrup...
-                                    p.newsCard__text.newsCard__text_lg Take part in our monthly trades and have and an impact on maple syrup wholesale...
-                                a(href="#").newsCard__arrow 
+                            a.newsCard-container.d-inline-block.mx-auto.my-3.m-lg-0(href="#tonews")
+                                .newsCard
+                                    .newsCard__back
+                                    .newsCard__wrap
+                                        .newsCard__top.d-flex.justify-content-between
+                                            p.newsCard__text 27 July 2019
+                                            p.newsCard__text 4:30 AM EST
+                                        h2.newsCard__title.text-left We help to get better deals in maple syrup...
+                                        p.newsCard__text.newsCard__text_lg.text-left Take part in our monthly trades and have and an impact on maple syrup wholesale...
+                                .newsCard__arrow 
                         .col-12.col-lg-3
-                            a(href="#").newsCard.mx-auto.my-3.m-lg-0
-                                .newsCard__back
-                                .newsCard__wrap
-                                    .newsCard__top.d-flex.justify-content-between
-                                        p.newsCard__text 27 July 2019
-                                        p.newsCard__text 4:30 AM EST
-                                    h2.newsCard__title We help to get better deals in maple syrup...
-                                    p.newsCard__text.newsCard__text_lg Take part in our monthly trades and have and an impact on maple syrup wholesale...
-                                a(href="#").newsCard__arrow 
+                            a.newsCard-container.d-inline-block.mx-auto.my-3.m-lg-0(href="#tonews")
+                                .newsCard
+                                    .newsCard__back
+                                    .newsCard__wrap
+                                        .newsCard__top.d-flex.justify-content-between
+                                            p.newsCard__text 27 July 2019
+                                            p.newsCard__text 4:30 AM EST
+                                        h2.newsCard__title.text-left We help to get better deals in maple syrup...
+                                        p.newsCard__text.newsCard__text_lg.text-left Take part in our monthly trades and have and an impact on maple syrup wholesale...
+                                .newsCard__arrow 
                         .col-12.col-lg-3
-                            a(href="#").newsCard.mx-auto.my-3.m-lg-0
-                                .newsCard__back
-                                .newsCard__wrap
-                                    .newsCard__top.d-flex.justify-content-between
-                                        p.newsCard__text 27 July 2019
-                                        p.newsCard__text 4:30 AM EST
-                                    h2.newsCard__title We help to get better deals in maple syrup...
-                                    p.newsCard__text.newsCard__text_lg Take part in our monthly trades and have and an impact on maple syrup wholesale...
-                                a(href="#").newsCard__arrow 
+                            a.newsCard-container.d-inline-block.mx-auto.my-3.m-lg-0(href="#tonews")
+                                .newsCard
+                                    .newsCard__back
+                                    .newsCard__wrap
+                                        .newsCard__top.d-flex.justify-content-between
+                                            p.newsCard__text 27 July 2019
+                                            p.newsCard__text 4:30 AM EST
+                                        h2.newsCard__title.text-left We help to get better deals in maple syrup...
+                                        p.newsCard__text.newsCard__text_lg.text-left Take part in our monthly trades and have and an impact on maple syrup wholesale...
+                                .newsCard__arrow 
                         .col-12.col-lg-3
-                            a(href="#").newsCard.mx-auto.my-3.m-lg-0
-                                .newsCard__back
-                                .newsCard__wrap
-                                    .newsCard__top.d-flex.justify-content-between
-                                        p.newsCard__text 27 July 2019
-                                        p.newsCard__text 4:30 AM EST
-                                    h2.newsCard__title We help to get better deals in maple syrup...
-                                    p.newsCard__text.newsCard__text_lg Take part in our monthly trades and have and an impact on maple syrup wholesale...
-                                a(href="#").newsCard__arrow 
+                            a.newsCard-container.d-inline-block.mx-auto.my-3.m-lg-0(href="#tonews")
+                                .newsCard
+                                    .newsCard__back
+                                    .newsCard__wrap
+                                        .newsCard__top.d-flex.justify-content-between
+                                            p.newsCard__text 27 July 2019
+                                            p.newsCard__text 4:30 AM EST
+                                        h2.newsCard__title.text-left We help to get better deals in maple syrup...
+                                        p.newsCard__text.newsCard__text_lg.text-left Take part in our monthly trades and have and an impact on maple syrup wholesale...
+                                .newsCard__arrow 
         .main_padding_lf
             .container
                 .row
@@ -471,14 +493,14 @@ main.main
             .main_padding_lf
                 .container
                     .row
-                        .col-md
-                        .col-12.col-md-6
+                        .col-md.col-lg
+                        .col-12.col-md-8.col-lg-6
                             h2.caption.caption_style_or Subscribe
                             p.buyCards__text Sign Up for our Newsletter to get the latest news and offers. No spam, only useful materials.
-                        .col-md
+                        .col-md.col-lg
                     .row
                         .col-md
-                        .col-12.col-md-6.d-flex
+                        .col-11.col-md-6.d-flex
                             .input-group
                                 input(type="email" class="form-control" placeholder="Your email" aria-label="Recipient's username" aria-describedby="button-addon2")
                                 .input-group-append
